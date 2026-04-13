@@ -1,6 +1,8 @@
 # lab2
 
-A new Flutter project.
+TODO: Change this later
+
+A New Flutter project.
 
 ## Getting Started
 
