@@ -19,4 +19,16 @@ class MyApp extends StatelessWidget {
       home: MainView(),
     );
   }
+
+  Widget _controlpanel(context, {double width = 320}) {
+    return Container(
+      width: width,
+      color: const Color.fromARGB(255, 193, 210, 218),
+    );
+  }
+
+  Widget _recipeArea(context) {
+   return Expanded(
+    child: Container(color: const Color.fromARGB(255, 204, 216, 176)),);
+  }
 }

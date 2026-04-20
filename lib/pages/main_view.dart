@@ -5,6 +5,8 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Placeholder());
+    return Scaffold(
+      body: Row(children: [Placeholder(), Expanded(child: Placeholder())]),
+      );
   }
 }
