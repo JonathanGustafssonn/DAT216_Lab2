@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
 
-class PriceControl extends StatefulWidget {
-  const PriceControl({super.key});
+class TimeControl extends StatefulWidget {
+  const TimeControl({super.key});
 
   @override
-  State<PriceControl> createState() => _PriceControlState();
+  State<TimeControl> createState() => _TimeControlState();
 }
 
-class _PriceControlState extends State<PriceControl> {
- double _price = 60;
+class _TimeControlState extends State<TimeControl> {
+ double _time = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +18,17 @@ class _PriceControlState extends State<PriceControl> {
     return Column(
       children: [
         Slider(
-          value: _price,
-          divisions: 40,
-          max: 200,
+          value: _time,
+          divisions: 15,
+          max: 150,
           onChanged: (double value) {
             setState(() {
-              _price = value;
-              recipeHandler.setMaxPrice(value.round());
+              _time = value;
             });
+            recipeHandler.setMaxTime(value.round());
           },
         ),
-        Text('${_price.round()} kr'),
+        Text('${_time.round()} minuter'),
       ],
   );
   }

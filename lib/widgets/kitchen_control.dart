@@ -1,3 +1,6 @@
+import 'package:lab2/model/recipe_database/recipe_handler.dart';
+import 'package:provider/provider.dart';
+
 import '../util/cuisine.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +11,7 @@ class KitchenControl extends StatelessWidget {
   Widget build(BuildContext context) {
 
     const labels = Cuisine.labels;
+    var recipeHandler =  Provider.of<RecipeHandler>(context, listen: false);
 
     return DropdownMenu<String>(
       width: 164,
@@ -21,7 +25,9 @@ class KitchenControl extends StatelessWidget {
            label: labels[i],
         ),
       ],
-      onSelected: (value){},
+      onSelected: (value){
+        recipeHandler.setCuisine(value);
+      },
     );
   }
 }
