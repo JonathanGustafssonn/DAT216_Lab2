@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lab2/widgets/difficulty_control.dart';
 import 'package:lab2/widgets/ingredient_control.dart';
+import 'package:lab2/widgets/kitchen_control.dart';
 import 'package:lab2/widgets/price_control.dart';
 
 class MainView extends StatelessWidget {
@@ -24,10 +25,10 @@ class MainView extends StatelessWidget {
           Center(
             child: 
             Text('hello i am the title of this webpage')),
-          Text('a bit of text'),
-          Text('a bit more of text'),
-          Row(children:[Text('Ingrendiens: '),IngredientControl()]),
-          Row(children:[Text('Kök: '),IngredientControl()]),
+          Text('Hitta ett recept som passar getom att ändra inställningarna nedanför.'),
+          SizedBox(height: 12),
+          Row(children:[Text('Ingrediens: '),IngredientControl()]),
+          Row(children:[Text('Kök: '),KitchenControl()]),
           Center(
             child: 
             Text('Svårighetsgrad')),
