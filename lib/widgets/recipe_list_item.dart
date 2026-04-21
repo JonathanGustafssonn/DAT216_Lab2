@@ -9,12 +9,16 @@ class RecipeListItem extends StatelessWidget {
   final void Function() onTap;
 
   @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: recipe.image,
-      title: Text(recipe.name),
-      onTap : onTap,
-      shape : Border.all(),
+    Widget build(BuildContext context) {
+      return Container(
+        decoration: BoxDecoration(
+          border:  Border.all()
+        ),
+      child: ListTile(
+        leading: recipe.image,
+        title: Text(recipe.name),
+        onTap: onTap,
+      ),
     );
- }
+  }
 }
