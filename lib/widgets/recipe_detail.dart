@@ -11,11 +11,31 @@ class RecipeDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var uiController = Provider.of<UIController>(context, listen: false);
 
-    return IconButton(
-      icon: Icon(Icons.close),
-      onPressed: () {
-        uiController.deselectRecipe();
-      },
+
+    return  SizedBox.expand(
+      child: Padding(
+        padding: EdgeInsets.only(left: 16),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 240,
+              height: 240,
+              child: recipe.customImage(),
+            ),
+            SizedBox(width: 12),
+            Text(
+              recipe.name,
+              style: TextStyle(fontSize: 20),
+            ),
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: (){
+                uiController.deselectRecipe();
+              },
+            )
+          ],
+        ),
+      )
     );
-}
+  }
 }
