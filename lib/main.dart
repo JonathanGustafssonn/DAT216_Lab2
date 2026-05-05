@@ -3,6 +3,7 @@ import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:lab2/pages/main_view.dart';
 import 'package:provider/provider.dart';
 import 'ui_controller.dart';
+import 'package:lab2/app_theme.dart';
 
 void main() {
   runApp(
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Receptsök',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 182, 138, 224)),
+        colorScheme: AppTheme.colorScheme,
+        textTheme: AppTheme.textTheme,
       ),
       home: MainView(),
     );

@@ -28,7 +28,11 @@ class _PriceControlState extends State<PriceControl> {
             });
           },
         ),
-        Text('${_price.round()} kr'),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text('${_price.round()} kr'),
+        )
       ],
   );
   }

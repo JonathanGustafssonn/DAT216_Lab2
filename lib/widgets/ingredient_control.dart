@@ -21,6 +21,15 @@ class IngredientControl extends StatelessWidget {
            DropdownMenuEntry(
            value: labels[i],
            label: labels[i],
+            labelWidget: i == 0
+              ? Text(labels[i])
+              : Row(
+                children: [
+                  MainIngredient.icons[i]!,
+                  const SizedBox(width: 8),
+                  Text(labels[i]),
+                ],
+              ),
         ),
       ],
       onSelected: (value){

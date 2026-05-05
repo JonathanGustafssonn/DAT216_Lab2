@@ -23,6 +23,15 @@ class KitchenControl extends StatelessWidget {
            DropdownMenuEntry(
            value: labels[i],
            label: labels[i],
+           labelWidget: i == 0
+                ? Text(labels[i])
+                : Row(
+                    children: [
+                      Cuisine.flags[i]!,
+                      const SizedBox(width: 8),
+                      Text(labels[i]),
+                    ],
+                  ),
         ),
       ],
       onSelected: (value){

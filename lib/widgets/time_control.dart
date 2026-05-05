@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
+import 'package:lab2/constants/assets.dart';
 
 class TimeControl extends StatefulWidget {
   const TimeControl({super.key});
@@ -28,7 +29,16 @@ class _TimeControlState extends State<TimeControl> {
             recipeHandler.setMaxTime(value.round());
           },
         ),
-        Text('${_time.round()} minuter'),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Row(
+            children: [
+              Image.asset(Assets.timeIcon, width: 20),
+              const SizedBox(width: 6),
+              Text('${_time.round()} minuter'),
+            ],)
+        )
       ],
   );
   }

@@ -27,11 +27,19 @@ class _DifficultyControlState extends State<DifficultyControl> {
     },
     child:Column(
       children:[
-        for(final label in Difficulty.labels)
-        RadioListTile<String>(
-          dense: true,
-          title: Text(label),
-          value: label,
+        for(int i = 0; i < Difficulty.labels.length; i++)
+          RadioListTile<String>(
+            dense: true,
+            value: Difficulty.labels[i],
+            title: i == 0
+              ? Text(Difficulty.labels[i])
+              : Row(
+                children: [
+                  Difficulty.icons[i]!,
+                  const SizedBox(width: 8),
+                  Text(Difficulty.labels[i]),
+                ],
+              ),
         ),
       ],
     ),
