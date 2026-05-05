@@ -14,30 +14,28 @@ class ControlPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 320,
-      padding: const EdgeInsets.all(AppTheme.paddingMedium),
       color: const Color.fromARGB(255, 138, 180, 224),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Logo(),
-          const Text(
-            'Hitta ett recept som passar genom att ändra inställningarna nedanför.\n',
+        children: const [
+          Logo(),
+          Text(
+            'Hitta ett recept som passar genom att \n ändra inställningarna nedanför.',
           ),
 
-          const Text('Ingrediens:', style: AppTheme.smallHeading),
-          const IngredientControl(),
+          Text('Ingrediens:', style: AppTheme.smallHeading),
+          IngredientControl(),
 
-          const Text('Kök:', style: AppTheme.smallHeading),
-          const KitchenControl(),
+          Text('Kök:', style: AppTheme.smallHeading),
+          KitchenControl(),
 
-          const Text('Svårighetsgrad', style: AppTheme.smallHeading),
-          const DifficultyControl(),
+          Text('Svårighetsgrad', style: AppTheme.smallHeading),
+          DifficultyControl(),
 
-          const Text('Maxpris:', style: AppTheme.smallHeading),
-          const PriceControl(),
+          Text('Maxpris:', style: AppTheme.smallHeading),
+          PriceControl(),
 
-          const Text('Maxtid:', style: AppTheme.smallHeading),
-          const TimeControl(),
+          Text('Maxtid:', style: AppTheme.smallHeading),
+          TimeControl(),
         ],
       ),
     );
