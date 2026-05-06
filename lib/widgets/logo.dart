@@ -10,7 +10,10 @@ class Logo extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(Assets.logo, height: 68),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Image.asset(Assets.logo, height: 68),
+        ),
         Stack(
           children: [
             const Text(
@@ -24,7 +27,7 @@ class Logo extends StatelessWidget {
             Transform.rotate(
               angle: -20 * pi / 180,
               child: const Padding(
-                padding: EdgeInsets.only(left: 8, top: 20),
+                padding: EdgeInsets.only(left: 100, top: 20),
                 child: Text(
                   'Sök',
                   style: TextStyle(

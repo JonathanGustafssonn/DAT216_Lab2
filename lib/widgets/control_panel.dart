@@ -21,19 +21,19 @@ class ControlPanel extends StatelessWidget {
           Text(
             'Hitta ett recept som passar genom att \n ändra inställningarna nedanför.',
           ),
-
+    
           Text('Ingrediens:', style: AppTheme.smallHeading),
           IngredientControl(),
-
+    
           Text('Kök:', style: AppTheme.smallHeading),
           KitchenControl(),
-
+    
           Text('Svårighetsgrad', style: AppTheme.smallHeading),
           DifficultyControl(),
-
+    
           Text('Maxpris:', style: AppTheme.smallHeading),
           PriceControl(),
-
+    
           Text('Maxtid:', style: AppTheme.smallHeading),
           TimeControl(),
         ],

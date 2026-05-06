@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab2/app_theme.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:lab2/constants/assets.dart';
@@ -30,14 +31,21 @@ class _TimeControlState extends State<TimeControl> {
           },
         ),
 
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Row(
-            children: [
-              Image.asset(Assets.timeIcon, width: 20),
-              const SizedBox(width: 6),
-              Text('${_time.round()} minuter'),
-            ],)
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: AppTheme.paddingLarge),
+              child: Row(
+                children: [
+                  Image.asset(Assets.timeIcon, width: 16),
+                  Padding(
+                    padding: const EdgeInsets.only(left: AppTheme.paddingSmall),
+                    child: Text('${_time.round()} minuter'),
+                  ),
+                ],)
+            ),
+          ],
         )
       ],
   );

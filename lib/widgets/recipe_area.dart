@@ -18,7 +18,7 @@ class RecipeArea extends StatelessWidget {
        contents = RecipeDetail(uiController.selectedRecipe!);
     }
     return Expanded(child: Container(
-      color: const Color.fromARGB(255, 139, 138, 224),
+      color: const Color.fromARGB(255, 253, 253, 253),
       child: contents,
     ),
     );
