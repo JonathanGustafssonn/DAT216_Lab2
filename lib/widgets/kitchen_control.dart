@@ -17,7 +17,7 @@ class KitchenControl extends StatelessWidget {
     return Row(
   mainAxisAlignment: MainAxisAlignment.end,
   children: [
-    Text('Ingrediens:'),
+    Text('Kök:'),
     SizedBox(width: AppTheme.paddingSmall),
     DropdownMenu<String>(
       width: 164,
@@ -33,7 +33,7 @@ class KitchenControl extends StatelessWidget {
           ),
         ],
         onSelected: (value){
-          recipeHandler.setMainIngredient(value);
+          recipeHandler.setCuisine(value);
         },
       ),
     ]

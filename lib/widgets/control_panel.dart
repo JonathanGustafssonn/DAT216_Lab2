@@ -15,28 +15,35 @@ class ControlPanel extends StatelessWidget {
     return Container(
       width: 320,
       color: const Color.fromARGB(255, 138, 180, 224),
-      child: Column(
-        children: const [
-          Logo(),
-          Text(
-            'Hitta ett recept som passar genom att \n ändra inställningarna nedanför.',
-          ),
-    
-          Text('Ingrediens:', style: AppTheme.smallHeading),
-          IngredientControl(),
-    
-          Text('Kök:', style: AppTheme.smallHeading),
-          KitchenControl(),
-    
-          Text('Svårighetsgrad', style: AppTheme.smallHeading),
-          DifficultyControl(),
-    
-          Text('Maxpris:', style: AppTheme.smallHeading),
-          PriceControl(),
-    
-          Text('Maxtid:', style: AppTheme.smallHeading),
-          TimeControl(),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: AppTheme.paddingMediumSmall),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Logo(),
+            Center(
+              child: Text(
+                'Hitta ett recept som passar genom att \n ändra inställningarna nedanför.',
+              ),
+            ),
+            SizedBox(height: 20,),
+            
+            IngredientControl(),
+
+            SizedBox(height: 12),
+            
+            KitchenControl(),
+            
+            Text('Svårighetsgrad', style: AppTheme.smallHeading),
+            DifficultyControl(),
+            
+            Text('Maxpris:', style: AppTheme.smallHeading),
+            PriceControl(),
+            
+            Text('Maxtid:', style: AppTheme.smallHeading),
+            TimeControl(),
+          ],
+        ),
       ),
     );
   }

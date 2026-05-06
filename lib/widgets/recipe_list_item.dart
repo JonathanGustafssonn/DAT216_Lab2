@@ -50,7 +50,9 @@ class RecipeListItem extends StatelessWidget {
                       padding: const EdgeInsets.only(top: AppTheme.paddingTiny),
                       child: Row(children: [
                           MainIngredient.icon(recipe.mainIngredient)!,
+                          const SizedBox(width: 12),
                           Container(width: 48,child: Difficulty.icon(recipe.difficulty)!),
+                          const SizedBox(width: 12),
                           Text('${recipe.time} min'),
                           const SizedBox(width: 12),
                                 Text('${recipe.price} kr'),

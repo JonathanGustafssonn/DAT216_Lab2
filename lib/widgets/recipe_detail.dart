@@ -31,7 +31,9 @@ class RecipeDetail extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
               _image(recipe),
-              Text('Ingredienser:'),
+              Text('Ingredienser:',
+              style: AppTheme.smallHeading,
+              ),
               for (final ingredient in recipe.ingredients)
                   Text(ingredient.toString()),
               //TEXTFÖR INGREDIENSER
@@ -51,6 +53,7 @@ class RecipeDetail extends StatelessWidget {
                     Row(
                       children: [
                         MainIngredient.icon(recipe.mainIngredient)!,
+                        const SizedBox(width: 12),
                                 Container(width: 48,child: Difficulty.icon(recipe.difficulty)!),
                                 const SizedBox(width: 12),
                                 Text('${recipe.time} min'),
